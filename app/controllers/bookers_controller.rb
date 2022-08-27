@@ -1,5 +1,6 @@
 class BookersController < ApplicationController
   def new
+    @bookers = Book.new(book_params)
   end
 
   def create
@@ -14,6 +15,7 @@ class BookersController < ApplicationController
   end
 
   def show
+    @user = current_user
   end
 
   def edit
