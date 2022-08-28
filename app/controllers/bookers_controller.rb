@@ -7,7 +7,7 @@ class BookersController < ApplicationController
     @bookers = Book.new(book_params)
     @bookers.user_id = current_user.id
     @bookers.save
-    redirect_to booker_path
+    redirect_to booker_path(@bookers)
   end
 
   def index
@@ -15,7 +15,7 @@ class BookersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @book = Book.find(params[:id])
   end
 
   def edit
@@ -24,6 +24,6 @@ class BookersController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:Title, :Opinion)
+    params.require(:book).permit(:title, :opinion)
   end
 end

@@ -54,7 +54,7 @@
               <a href="/books/30347">zikkenn</a>
             </td>
             <td>test item</td>
-            <% if post.user == @user %>
+            <% if current_user == @user %>
               <td><a class="btn btn-sm btn-success edit_book_30347" href="/books/30347/edit">Edit</a></td>
               <td><a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_30347" rel="nofollow" data-method="delete" href="/books/30347">Destroy</a></td>
             <% else %>
