@@ -12,6 +12,7 @@ class BookersController < ApplicationController
 
   def index
     @user = current_user
+    @bookers = Book.page(params[:page])
   end
 
   def show
