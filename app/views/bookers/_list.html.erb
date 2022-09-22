@@ -1,8 +1,8 @@
 <div class="card-list-container py-5">
-  <% bookers.each do |bookers| %>
+  <% @bookers.each do |book| %>
   <div class="card w-50 mx-auto mt-4 shadow-lg">
-    <%= link_to bookers_path(bookers.id) do %>
-      <%= image_tag bookers.get_image, class:"card-img-top"; %>
+    <%= link_to bookers_path(book.id) do %>
+      <%= image_tag book.get_image, class:"card-img-top"; %>
     <% end %>
     <div class="card-body">
       <div class="row">

@@ -12,7 +12,7 @@ class BookersController < ApplicationController
 
   def index
     @user = current_user
-    @bookers = Book.page(params[:page])
+    @bookers = Book.all
   end
 
   def show
